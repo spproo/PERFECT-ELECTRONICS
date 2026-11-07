@@ -1,26 +1,19 @@
 # Perfect Electronics website
 
-A responsive, static website for Perfect Electronics. It is ready to deploy on Vercel.
+Responsive static website with a guided phone enquiry flow.
 
-## Deploy on Vercel
-1. Extract `perfect-electronics-website.zip`.
-2. Sign in to https://vercel.com/ and choose **Add New → Project**.
-3. Import the folder from a GitHub repository, or use Vercel CLI from this folder:
-   - Install Node.js if needed.
-   - Run `npm i -g vercel`
-   - Run `vercel` and follow the prompts.
-4. For this plain HTML/CSS/JS site, use the project root as the root directory. No build command or output directory is required; if Vercel asks for a framework, choose **Other**.
-5. After deployment, Vercel gives you a live `.vercel.app` URL. You can connect a custom domain from the project's **Settings → Domains**.
+## Deploy / update on Vercel
+1. Replace the files in your GitHub repository with the contents of this folder (keep the image files and favicon in the repository root, as the current GitHub upload is flat).
+2. Commit the changes to the main branch. Vercel should redeploy automatically.
+3. No build command or output directory is required; choose Other as the framework preset.
 
-## Edit before publishing
-- Confirm both phone numbers, address, Facebook link and Google business link.
-- Confirm which repairs/accessories are currently offered and the current second-hand phone stock.
-- The site intentionally does **not** invent customer testimonials or ratings. Add genuine customer reviews only with permission.
-- The displayed service descriptions are general descriptions; repair feasibility, parts, prices and stock should be confirmed with the shop.
-- Replace the two images in `assets/` if you want newer photographs.
+## Guided enquiry flow
+Choose a brand → Buy new / Get repaired / Buy second hand → series → model → (repair only) multi-select issue list → Call or WhatsApp. WhatsApp opens a pre-filled message containing the customer's choices.
 
-## Files
-- `index.html` — website content
-- `styles.css` — responsive styling
-- `script.js` — mobile navigation and current year
-- `assets/` — supplied shop photographs and favicon
+## Catalogue maintenance
+Edit `catalogue` in `script.js` to add brands, series or model names. The list is a starter catalogue, not a complete or live inventory. Confirm model availability and names before advertising. Product cards currently use a remote generic phone image URL; replace with official product image URLs only when you have permission and verified stable image links.
+
+## Important
+- The website does not claim real-time stock or guaranteed repair pricing.
+- WhatsApp enquiries go to 9717189697; the second contact number is also shown on the site.
+- Shop images are referenced from the repository root: `storefront.jpg`, `store-interior.jpg`, `favicon.svg`.
