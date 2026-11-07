@@ -27,8 +27,9 @@
         <span><strong>PERFECT</strong><small>ELECTRONICS</small></span>
       </a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">हिन्दी</button>
       <nav class="nav-links" id="navLinks">
-        <a href="#catalogue">Choose a phone</a><a href="#services">Services</a><a href="#about">About us</a><a href="#gallery">Our shop</a><a href="#reviews">Reviews</a><a href="#contact" class="nav-cta">Visit / Contact</a>
+        <a href="#catalogue">Choose a phone</a><a href="#booking">Book repair</a><a href="#sell-phone">Sell / Exchange</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#contact" class="nav-cta">Visit / Contact</a>
       </nav>
     </div>
   </header>
@@ -128,6 +129,43 @@
       <div class="container">
         <div class="section-heading"><div><div class="eyebrow">COME BY AND SAY HELLO</div><h2>A look inside <span>our store.</span></h2></div><p>Visit us in Nanda Block for enquiries, device checks and accessory options.</p></div>
         <div class="gallery-grid"><img src="storefront.jpg" alt="Perfect Electronics shop front and illuminated sign"><img src="store-interior.jpg" alt="Store interior and product displays"></div>
+      </div>
+    </section>
+
+    <section class="lead-forms-section section" id="booking">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">REPAIR ENQUIRY</div><h2>Book a <span>repair visit.</span></h2></div><p>Tell us what is wrong with your phone and when you would like to visit. We will confirm the appointment on WhatsApp.</p></div>
+        <form class="lead-form" id="repairForm">
+          <label>Full name<input name="name" autocomplete="name" required placeholder="Your name"></label>
+          <label>Phone number<input name="phone" type="tel" inputmode="tel" pattern="[0-9+() -]{8,18}" required placeholder="Your contact number"></label>
+          <label>Phone brand<select name="brand" required><option value="">Select brand</option><option>Apple</option><option>Samsung</option><option>OnePlus</option><option>vivo</option><option>OPPO</option><option>Xiaomi / Redmi</option><option>Realme</option><option>Motorola</option><option>Nothing</option><option>Google Pixel</option><option>Other</option></select></label>
+          <label>Phone model<input name="model" required placeholder="e.g. iPhone 13 / Galaxy S22"></label>
+          <label class="form-wide">Repair issue(s)<select name="issue" required><option value="">Choose the main issue</option><option>Screen / display</option><option>Battery</option><option>Charging port</option><option>Speaker / microphone</option><option>Camera</option><option>Software / performance</option><option>Water damage</option><option>Network / SIM</option><option>Other / not sure</option></select></label>
+          <label>Preferred visit date<input name="date" type="date" id="repairDate" required></label>
+          <label>Preferred time<select name="time" required><option value="">Select time</option><option>Morning (10 AM–1 PM)</option><option>Afternoon (1 PM–4 PM)</option><option>Evening (4 PM–8 PM)</option><option>Flexible</option></select></label>
+          <label class="form-wide">Additional details<textarea name="details" rows="3" placeholder="Tell us anything else that may help (optional)"></textarea></label>
+          <div class="form-wide form-submit-row"><p>Submitting opens WhatsApp with your enquiry. Your visit is confirmed only after the shop replies.</p><button class="btn btn-primary" type="submit">Send repair booking on WhatsApp ↗</button></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="sell-section section" id="sell-phone">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">SELL OR EXCHANGE</div><h2>Give your old phone <span>a new route.</span></h2></div><p>Share a few details about your device. We will contact you to discuss inspection and a possible offer. Final value depends on physical inspection.</p></div>
+        <form class="lead-form" id="sellForm">
+          <label>Full name<input name="name" autocomplete="name" required placeholder="Your name"></label>
+          <label>Phone number<input name="phone" type="tel" inputmode="tel" pattern="[0-9+() -]{8,18}" required placeholder="Your contact number"></label>
+          <label>Phone brand<input name="brand" required placeholder="e.g. Apple, Samsung"></label>
+          <label>Phone model<input name="model" required placeholder="e.g. iPhone 13"></label>
+          <label>Storage<select name="storage" required><option value="">Select storage</option><option>64 GB</option><option>128 GB</option><option>256 GB</option><option>512 GB</option><option>1 TB</option><option>Other / not sure</option></select></label>
+          <label>Device condition<select name="condition" required><option value="">Select condition</option><option>Like new</option><option>Good – minor signs of use</option><option>Fair – visible wear</option><option>Damaged / needs repair</option><option>Not sure</option></select></label>
+          <label>Battery health (if iPhone)<input name="battery" placeholder="e.g. 86% / Not applicable"></label>
+          <label>Expected price (optional)<input name="price" inputmode="numeric" placeholder="₹"></label>
+          <label class="form-wide">Accessories included<select name="accessories"><option>Phone only</option><option>Original box</option><option>Charger / cable</option><option>Box and charger</option><option>Other accessories</option></select></label>
+          <label class="form-wide">Anything else? (optional)<textarea name="details" rows="3" placeholder="Mention scratches, repairs, bill availability, etc."></textarea></label>
+          <div class="form-wide photo-note"><strong>Want to share phone photos?</strong><p>After WhatsApp opens, attach clear photos of the front, back and any damage. Photos are not uploaded automatically by this form.</p></div>
+          <div class="form-wide form-submit-row"><p>This is an enquiry, not a guaranteed quote or purchase commitment. Final offer is subject to inspection.</p><button class="btn btn-primary" type="submit">Get a sell / exchange estimate ↗</button></div>
+        </form>
       </div>
     </section>
 
