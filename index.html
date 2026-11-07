@@ -140,7 +140,20 @@
           <label>Phone number<input name="phone" type="tel" inputmode="tel" pattern="[0-9+() -]{8,18}" required placeholder="Your contact number"></label>
           <label>Phone brand<select name="brand" required><option value="">Select brand</option><option>Apple</option><option>Samsung</option><option>OnePlus</option><option>vivo</option><option>OPPO</option><option>Xiaomi / Redmi</option><option>Realme</option><option>Motorola</option><option>Nothing</option><option>Google Pixel</option><option>Other</option></select></label>
           <label>Phone model<input name="model" required placeholder="e.g. iPhone 13 / Galaxy S22"></label>
-          <label class="form-wide">Repair issue(s)<select name="issue" required><option value="">Choose the main issue</option><option>Screen / display</option><option>Battery</option><option>Charging port</option><option>Speaker / microphone</option><option>Camera</option><option>Software / performance</option><option>Water damage</option><option>Network / SIM</option><option>Other / not sure</option></select></label>
+          <fieldset class="form-wide repair-issue-fieldset"><legend>Repair issue(s) — select all that apply</legend><div class="repair-checkbox-grid">
+            <label class="repair-check"><input type="checkbox" name="issue" value="Screen / display"> Screen / display</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Battery"> Battery</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Charging port"> Charging port</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Speaker / earpiece"> Speaker / earpiece</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Microphone"> Microphone</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Camera"> Camera</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Power / volume buttons"> Power / volume buttons</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Water / liquid damage"> Water / liquid damage</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Software / performance"> Software / performance</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Network / SIM"> Network / SIM</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Back panel / body"> Back panel / body</label>
+            <label class="repair-check"><input type="checkbox" name="issue" value="Motherboard / other"> Motherboard / other</label>
+          </div><small class="form-help">Select multiple issues if needed.</small><small id="repairIssueWarning" class="form-warning" role="alert"></small></fieldset>
           <label>Preferred visit date<input name="date" type="date" id="repairDate" required></label>
           <label>Preferred time<select name="time" required><option value="">Select time</option><option>Morning (10 AM–1 PM)</option><option>Afternoon (1 PM–4 PM)</option><option>Evening (4 PM–8 PM)</option><option>Flexible</option></select></label>
           <label class="form-wide">Additional details<textarea name="details" rows="3" placeholder="Tell us anything else that may help (optional)"></textarea></label>

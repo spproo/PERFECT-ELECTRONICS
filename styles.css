@@ -19,3 +19,17 @@
 .photo-note strong{font-size:12px}
 .photo-note p{margin-top:5px}
 @media(max-width:700px){.nav-wrap{gap:10px}.language-toggle{margin-left:auto}.lead-form{grid-template-columns:1fr;padding:18px}.form-wide{grid-column:auto}.form-submit-row{display:flex;flex-direction:column;align-items:stretch}.form-submit-row .btn{justify-content:center}}
+
+/* Repair issue multi-select and language control */
+.language-toggle{border:1px solid #e3e7ed;background:#fff;color:#172237;border-radius:7px;padding:10px 13px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.language-toggle:hover{border-color:#ed1d36;color:#ed1d36}
+.repair-issue-fieldset{border:0;padding:0;margin:0;min-width:0}
+.repair-issue-fieldset legend{font-size:12px;font-weight:700;margin-bottom:12px;color:#263348}
+.repair-checkbox-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.repair-check{display:flex;align-items:center;gap:9px;border:1px solid #e7ebf0;border-radius:8px;padding:11px 12px;font-size:12px;font-weight:500;cursor:pointer;background:#fff}
+.repair-check:has(input:checked){border-color:#ed1d36;background:#fff7f8}
+.repair-check input{accent-color:#ed1d36;width:16px;height:16px;flex:none}
+.form-help{display:block;color:#828d9b;font-size:10px;margin-top:10px}
+.form-warning{display:block;color:#bd4b22;font-size:11px;margin-top:6px}
+@media(max-width:900px){.repair-checkbox-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.language-toggle{margin-left:auto;margin-right:12px;padding:9px 10px}.repair-checkbox-grid{grid-template-columns:1fr}}
